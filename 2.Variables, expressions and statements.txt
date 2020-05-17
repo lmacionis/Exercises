@@ -1,0 +1,134 @@
+1. Take the sentence: All work and no play makes Jack a dull boy. Store each word in a separate variable, 
+then print out the sentence on one line using print.
+
+
+# All work and no play makes Jack a dull boy.		Comment.
+a = 'All'
+b = 'work'
+c = 'and'
+d = 'no'
+e = 'play'
+f = 'makes'
+g = 'Jack'
+i = 'a'
+h = 'dull'
+j = 'boy.'
+print(a, b, c, d, e, f, g, i, h, j)
+
+Ats.: All work and no play makes Jack a dull boy.
+
+
+
+2. Add parenthesis to the expression 6 * 1 - 2 to change its value from 4 to -6.
+
+
+n = 6 * (1 - 2)
+print(n)
+
+Ats.: -6
+
+
+
+3. Place a comment before a line of code that previously worked, and record what happens when you rerun the program.
+
+
+# Add parenthesis to the expression 6 * 1 - 2 to change its value from 4 to -6.		Comment.
+
+n = 6 * (1 - 2)
+print(n)
+
+Ats.: Comments, do not impact code.
+
+
+
+4. Start the Python interpreter and enter bruce + 4 at the prompt. This will give you an error:
+
+NameError: name 'bruce' is not defined
+Assign a value to bruce so that bruce + 4 evaluates to 10.
+
+
+bruce = 6
+print(bruce + 4)
+
+Ats.: 10
+
+
+
+5. The formula for computing the final amount if one is earning compound interest is given on Wikipedia as
+
+formula for compound interest
+a = p * (1 + r/n) ** (n * t)
+
+Write a Python program that assigns the principal amount of $10000 to variable P, assign to n the value 12, 
+and assign to r the interest rate of 8%. Then have the program prompt the user for the number of years t that the money 
+will be compounded for. Calculate and print the final amount after t years.
+
+
+p = 10000
+n = 12
+r = 8
+response = input('Number of years that the money will be compounded ')
+t = float(response)
+a = p * (1 + r/n) ** (n * t)
+print(a)
+
+Ats.: Number of years that the money will be compounded 10
+4.186488995428013e+30
+
+
+
+6. Evaluate the following numerical expressions in your head, then use the Python interpreter to check your results:
+
+>>> 5 % 2
+>>> 9 % 5
+>>> 15 % 12
+>>> 12 % 15
+>>> 6 % 6
+>>> 0 % 7
+>>> 7 % 0
+What happened with the last example? Why? If you were able to correctly anticipate the computer’s response in all 
+but the last one, it is time to move on. If not, take time now to make up examples of your own. Explore the modulus 
+operator until you are confident you understand how it works.
+
+
+print(5%2)	Ats.: 1
+print(9%5)	Ats.: 4
+print(15%12)	Ats.: 3
+print(12%15)	Ats.: 12
+print(6%6)	Ats.: 0
+print(0%7)	Ats.: 0
+print(7%0)	Ats.: ZeroDivisionError: integer division or modulo by zero. (Division from zero is not possible.)
+
+
+
+7. You look at the clock and it is exactly 2pm. You set an alarm to go off in 51 hours. 
+At what time does the alarm go off? (Hint: you could count on your fingers, but this is not what we’re after. 
+If you are tempted to count on your fingers, change the 51 to 5100.)
+
+
+t1 = 51
+t2 = 2
+t3 = t2 + (t1 % 12)
+
+print(t3)
+
+Ats.: 5 ( Just dont know if its morning or evening, i think i need to use if for that).
+
+
+
+8. Write a Python program to solve the general version of the above problem. 
+Ask the user for the time now (in hours), and ask for the number of hours to wait. 
+Your program should output what the time will be on the clock when the alarm goes off.
+
+
+hours_to_wait = input('How many hours you need to wait? ')
+t1 = float(hours_to_wait)
+time_now = input('Whats the time? ')
+t2 = float(time_now)
+t3 = t2 + (t1 % 12)
+
+print(t3)
+
+Ats.: How many hours you need to wait? 1
+Whats the time? 3
+4.0

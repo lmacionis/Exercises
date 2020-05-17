@@ -1,0 +1,383 @@
+1. Write a program that prints We like Python's turtles! 1000 times.
+
+
+for i in range(1000):
+    print("We like Python's turtles!")
+
+Ats.: We like Python's turtles!
+We like Python's turtles!
+We like Python's turtles!
+...
+
+
+3. Write a program that uses a for loop to print
+ One of the months of the year is January
+ One of the months of the year is February
+
+
+months = ["January", "February", "March", "May", "April", "June", "July", "August", "September", "October", "November", "December"]
+for i in months:
+    year = "One of the months of the year is " + i
+    print(year)
+
+Ats.: One of the months of the year is January
+One of the months of the year is February
+One of the months of the year is March
+One of the months of the year is May
+One of the months of the year is April
+One of the months of the year is June
+One of the months of the year is July
+One of the months of the year is August
+One of the months of the year is September
+One of the months of the year is October
+One of the months of the year is November
+One of the months of the year is December
+
+
+
+5. Assume you have the assignment xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+
+
+a. Write a loop that prints each of the numbers on a new line.
+
+xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+for i in xs:
+    print(i)
+
+Ats.: 12
+10
+32
+3
+...
+
+
+b. Write a loop that prints each number and its square on a new line.
+
+xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+for i in xs:
+    print(i, i**2)
+
+Ats.: 12 144
+10 100
+32 1024
+...
+
+
+c. Write a loop that adds all the numbers from the list into a variable called total. 
+You should set the total variable to have the value 0 before you start adding them up, 
+and print the value in total after the loop has completed.
+
+
+xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+total = 0
+for i in xs:
+    total = total + i
+    print(f"Total: {total}")
+
+Ats.: Total: 12
+Total: 22
+Total: 54
+Total: 57
+Total: 123
+Total: 140
+Total: 182
+Total: 281
+Total: 301		(I dont know how to get only the last item.)
+
+
+d. Print the product of all the numbers in the list. (product means all multiplied together)
+
+
+xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+total = 1
+for i in xs:
+    total = total * i
+    print(f"Total: {total}")
+
+Ats.: Total: 12
+Total: 120
+Total: 3840
+Total: 11520
+Total: 760320
+Total: 12925440
+Total: 542868480
+Total: 53743979520
+Total: 1074879590400		(I dont know how to get only the last item.)
+
+
+
+6. Use for loops to make a turtle draw these regular polygons (regular means all sides the same lengths, 
+all angles the same):
+
+a. An equilateral triangle
+b. A square
+c. A hexagon (six sides)
+d. An octagon (eight sides)
+
+
+a.
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+triangle = turtle.Turtle()
+
+for i in [0, 1, 2]:
+    triangle.forward(80)
+    triangle.left(120)
+
+Ats.: An equilateral triangle
+
+
+b.
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+square = turtle.Turtle()
+
+for i in [0, 1, 2, 3]:
+    square.forward(90)
+    square.left(90)
+
+Ats.: Square
+
+
+c. Hexagon
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+hexagon= turtle.Turtle()
+
+for i in [0, 1, 2, 3, 4, 5]:
+    hexagon.forward(60)
+    hexagon.left(60)
+
+Ats.: Hexagon
+
+
+d. Octagon
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+octagon = turtle.Turtle()
+
+for i in [0, 1, 2, 3, 4, 5, 6, 7]:
+    octagon.forward(45)
+    octagon.left(45)
+
+Ats.: Octagon
+
+
+
+7. A drunk pirate makes a random turn and then takes 100 steps forward, makes another random turn, 
+takes another 100 steps, turns another random amount, etc. A social science student records the 
+angle of each turn before the next 100 steps are taken. Her experimental data is 
+[160, -43, 270, -97, -43, 200, -940, 17, -86]. (Positive angles are counter-clockwise.) 
+Use a turtle to draw the path taken by our drunk friend.
+
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+octagon = turtle.Turtle()
+
+for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
+    octagon.left(angle)
+    octagon.forward(100)
+
+wn.mainloop()
+
+Ats.: You will see.
+
+
+
+8. Enhance your program above to also tell us what the drunk pirate’s heading is after 
+he has finished stumbling around. (Assume he begins at heading 0).
+
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+octagon = turtle.Turtle()
+
+for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
+    octagon.left(angle)
+    octagon.forward(100)
+
+# print("The Pirate's finall heading was", octagon.heading()) gives this parts answer before quiting the window.
+
+wn.mainloop()
+
+print("The Pirate's finall heading was", octagon.heading())
+
+Ats.: You will see.
+
+
+
+9. If you were going to draw a regular polygon with 18 sides, what angle would you need 
+to turn the turtle at each corner?
+
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Polygons")
+
+octagon = turtle.Turtle()
+
+for i in range(18):
+    octagon.forward(50)
+    octagon.left(20)
+
+# print("The Pirate's finall heading was", octagon.heading()) gives this parts answer before quiting the window.
+
+wn.mainloop()
+
+print("The Pirate's finall heading was", octagon.heading())
+
+Ats.: 20 degrees
+
+
+
+10. At the interactive prompt, anticipate what each of the following lines will do, and then record what happens. 
+Score yourself, giving yourself one point for each one you anticipate correctly:
+
+
+>>> import turtle
+>>> wn = turtle.Screen()
+>>> tess = turtle.Turtle()
+>>> tess.right(90)
+>>> tess.left(3600)
+>>> tess.right(-90)
+>>> tess.speed(10)
+>>> tess.left(3600)
+>>> tess.speed(0)
+>>> tess.left(3645)
+>>> tess.forward(-100)
+
+Ats.: Only going to turn couple of times and then go by -100 forward
+
+
+
+11. Write a program to draw a shape like this:
+
+_images/star.png
+
+Hints:
+
+Try this on a piece of paper, moving and turning your cellphone as if it was a turtle. 
+Watch how many complete rotations your cellphone makes before you complete the star. Since each full 
+rotation is 360 degrees, you can figure out the total number of degrees that your phone was rotated through. 
+If you divide that by 5, because there are five points to the star, you’ll know how many degrees to turn the 
+turtle at each point.
+
+You can hide a turtle behind its invisibility cloak if you don’t want it shown. 
+It will still draw its lines if its pen is down. The method is invoked as tess.hideturtle() . 
+To make the turtle visible again, use tess.showturtle() .
+
+
+import turtle
+wn = turtle.Screen()
+
+tess = turtle.Turtle()
+tess.hideturtle()
+
+for i in range(5):
+    tess.forward(50)
+    tess.left(216)
+
+wn.mainloop()
+
+Ats.: Star, (216 degrees, becouse All angles need to add up to 180 degrees. 
+so 180/5 points(sides)= 36. now since turtle is facing the opposite way we need to turn him 180 
+degrees, minus the 36 degrees. so 144 degrees to the right. or if to the left, then 180+36=216.)
+
+
+
+12. Write a program to draw a face of a clock that looks something like this:
+
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("hotpink")
+wn.title("Clock")
+
+tess = turtle.Turtle()
+tess.pensize(2)
+tess.shape("turtle")
+
+tess.stamp()
+
+for i in range(12):
+    tess.penup()
+    tess.forward(50)
+    tess.pendown()
+    tess.forward(20)
+    tess.penup()
+    tess.forward(20)
+    tess.pendown()
+    tess.stamp()
+    tess.penup()
+    tess.forward(-90)
+    tess.left(30)
+    tess.pendown()
+
+wn.mainloop()
+
+Ats.: Looks like in the example, but I think that you can make it, in diferent ways.
+
+
+
+13. A sprite is a simple spider shaped thing with n legs coming out from a center point. 
+The angle between each leg is 360/n degrees.
+
+Write a program to draw a sprite where the number of legs is provided by the user.
+
+      
+
+
+import turtle
+
+wn = turtle.Screen()
+
+babbage = turtle.Turtle()
+babbage.shape("triangle")
+
+n = int(input("How many legs should this sprite have? "))
+angle = 360/n
+
+for i in range(n):
+    #babbage.speed(0)       maximalus greitis
+    babbage.speed(10)
+    # draw the leg
+    babbage.right(angle)
+    babbage.forward(65)
+    babbage.stamp()
+
+    # go back to the middle and turn back around
+    babbage.right(180)
+    babbage.forward(65)
+    babbage.right(180)
+
+babbage.shape("circle")
+
+wn.exitonclick()
+
+Ats.: A spider with n legs. (Input window is under Turtel screen, I think its becouce turtle screen opens up 
+on a diferent screen.
+Input window is under turtle screen.)
